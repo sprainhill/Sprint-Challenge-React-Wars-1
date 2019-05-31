@@ -1,8 +1,9 @@
 import React from 'react';
 
-import './StarWars.css';
+import './StarWars.scss';
 
 const Character = props => {
+    console.log('Character props', props)
     return (
         <div className="char-card">
             <p>Name: <span>{props.starwarsChar.name}</span></p>

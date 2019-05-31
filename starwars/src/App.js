@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 
 import CharacterList from './components/CharacterList'
 
@@ -7,7 +7,10 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      nextPage: '',
+      prevPage: '',
+      newChars: ''
     };
   }
 
@@ -25,12 +28,31 @@ class App extends Component {
       })
       .then(data => {
         console.log('data', data)
-        this.setState({ starwarsChars: data.results });
+        console.log('data.results', data.results)
+        console.log('data.next', data.next)
+
+        this.setState({ 
+          starwarsChars: data.results ,
+          nextPage: data.next,
+          prevPage: data.previous,
+        });
       })
       .catch(err => {
         throw new Error(err);
       });
   };
+
+  getNextChars = () => {
+    this.setState({
+      newChars: this.state.nextPage
+    })
+
+    getPrevChars = () => {
+      this.setState({
+        newChars: this.state.prevPage
+      })
+
+  }
 
   render() {
     return (

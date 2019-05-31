@@ -1,0 +1,37 @@
+
+  /* @font-face kit by Fonts2u (https://fonts2u.com) */ 
+  @font-face {
+    font-family:"STARWARS";
+    src: url("../STARWARS.ttf") format("truetype")
+  }
+
+  p {
+    font-family: 'STARWARS';
+    font-size: 1.25rem;
+  }
+
+.char-card {
+    color: #443e3e;
+    max-width: 500px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #EE7600;
+}
+
+.char-card:hover {
+    color: #EE7600;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #443e3e;
+}
+
+
+
+.character-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+.btn {
+  
+}

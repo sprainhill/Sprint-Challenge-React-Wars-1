@@ -4,5 +4,7 @@
 .Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #EE7600;
 }
 /* write your parent styles in here for your App.js */
